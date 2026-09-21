@@ -65,14 +65,14 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 ::::::::::::::::::::::::::::: challenge
 ## Challenge: True or False
 
-•  [Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source. 
-•  [Myth or Fact] An open source license is essentially a legal “permission slip” from the creator. 
-•  [Myth or Fact] An open source license means I am giving away my ownership of the code.
+[Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source. 
+[Myth or Fact] An open source license is essentially a legal “permission slip” from the creator. 
+[Myth or Fact] An open source license means I am giving away my ownership of the code.
 
 :::::::::::::::::::::::: solution
-•  [Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source.   FALSE/MYTH
-•  [Myth or Fact] An open source license is essentially a legal “permission slip” from the creator.  TRUE/FACT
-•  [Myth or Fact] An open source license means I am giving away my ownership of the code. FALSE/MYTH
+[Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source.   FALSE/MYTH
+[Myth or Fact] An open source license is essentially a legal “permission slip” from the creator.  TRUE/FACT
+[Myth or Fact] An open source license means I am giving away my ownership of the code. FALSE/MYTH
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::
@@ -82,12 +82,12 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 Open-source licenses fall into two broad groups; within those groups, there are some gradation.  Once you understand licenses choosing a license becomes easier.
 
 Two categories are:
- Permissive licenses
- Copyleft licenses
+    Permissive licenses
+    Copyleft licenses
 
 ### Permissive licenses
 Easy to comply with
-These allow broad reuse with minimal restrictions. Anyone can freely  copy, modify, or redistribute the code. They are common in research because they're simple and maximize flexibility. Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
+These allow broad reuse with minimal restrictions. Anyone can freely copy, modify, or redistribute the code. They are common in research because they're simple and maximize flexibility. Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
 
 Examples:  **BSD and MIT**
 Different flavors of BSD
@@ -106,7 +106,7 @@ Different flavors of BSD
 Special case: Apache and BSD + Patent
 Both are considered Permissive licenses; BUT they contain explicit patent grants.
 
-The UC and many corporations are wary about patent grants as these patents grants can inadvertently reach into patent portfolio  and cover a patent from another campus or lab/research team.
+The UC and many corporations are wary about patent grants as these patents grants can inadvertently reach into their patent portfolio and cover a patent from another campus or lab/research team.
 
 For this reach releasing code under the Apache and BSD + Patent is disfavored.
 ::::::::::::::::::::::::::::::: caution
