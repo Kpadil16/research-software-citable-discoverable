@@ -16,9 +16,9 @@ set -e
 #     - A chain of view-only REFERENCE BRANCHES shows the target state after each
 #       episode, so learners can check their work in the browser:
 #
-#         main → after-license → after-citation → after-release → after-metadata
+#         main → 02-add-license → 03-add-citation → 04-create-release → 05-add-metadata
 #
-#     - `optional-pixi` branches off `after-metadata` and is the ONLY branch that
+#     - `06-optional-pixi` branches off `05-add-metadata` and is the ONLY branch that
 #       contains pixi files. Nothing in the main chain depends on pixi.
 #
 #  INSTRUCTOR PREPARATION:
@@ -79,7 +79,7 @@ Analysis tools for biodiversity research data.
 > **Note for learners:** this is the *starting state* for the
 > "Sharing Research Software" lesson. It intentionally has no license,
 > citation file, release, or metadata. You'll add those over the course of
-> the lesson. To see the finished version, switch to the `after-metadata`
+> the lesson. To see the finished version, switch to the `05-add-metadata`
 > branch in the branch dropdown.
 EOF
 
@@ -106,10 +106,10 @@ git commit -m "Initial project: analysis script, README, and requirements" --qui
 echo "--> main is at the starting state"
 
 # ======================================================================================
-#  after-license — Episode 2: add a LICENSE
+#  02-add-license — Episode 2: add a LICENSE
 # ======================================================================================
 git checkout main --quiet
-git checkout -b after-license --quiet
+git checkout -b 02-add-license --quiet
 
 cat <<'EOF' > LICENSE
 BSD 3-Clause License
@@ -154,9 +154,9 @@ git add .
 git commit -m "Add BSD 3-Clause license and README license section" --quiet
 
 # ======================================================================================
-#  after-citation — Episode 3: add CITATION.cff
+#  03-add-citation — Episode 3: add CITATION.cff
 # ======================================================================================
-git checkout -b after-citation --quiet
+git checkout -b 03-add-citation --quiet
 
 cat <<EOF > CITATION.cff
 cff-version: 1.2.0
@@ -183,9 +183,9 @@ git add .
 git commit -m "Add CITATION.cff" --quiet
 
 # ======================================================================================
-#  after-release — Episode 4: release v0.1.0 + Zenodo DOI (badge + cff doi)
+#  04-create-release — Episode 4: release v0.1.0 + Zenodo DOI (badge + cff doi)
 # ======================================================================================
-git checkout -b after-release --quiet
+git checkout -b 04-create-release --quiet
 
 # Add a DOI badge to the top of the README (placeholder points at Zenodo Sandbox).
 cat <<'EOF' > README.md
@@ -231,9 +231,9 @@ git commit -m "Record Zenodo DOI for the v0.1.0 release" --quiet
 git tag -a v0.1.0 -m "Release v0.1.0: first citable version (LICENSE + CITATION.cff + DOI)"
 
 # ======================================================================================
-#  after-metadata — Episode 5: full metadata + community docs (THE FINISHED REPO)
+#  05-add-metadata — Episode 5: full metadata + community docs (THE FINISHED REPO)
 # ======================================================================================
-git checkout -b after-metadata --quiet
+git checkout -b 05-add-metadata --quiet
 
 cat <<EOF > .zenodo.json
 {
@@ -350,7 +350,7 @@ Analysis tools for biodiversity research data. This project demonstrates reprodu
    \`\`\`
 
 > Want a fully reproducible, cross-platform environment (Python + R with a lockfile)?
-> See the optional pixi setup on the \`optional-pixi\` branch.
+> See the optional pixi setup on the \`06-optional-pixi\` branch.
 
 ## Contributing
 
@@ -420,10 +420,10 @@ git add .
 git commit -m "Improve metadata and add community docs (README, CONTRIBUTING, CoC, .zenodo.json)" --quiet
 
 # ======================================================================================
-#  optional-pixi — OPTIONAL episode: reproducible environment with pixi
-#  (branches off after-metadata; the ONLY branch with pixi files)
+#  06-optional-pixi — OPTIONAL episode: reproducible environment with pixi
+#  (branches off 05-add-metadata; the ONLY branch with pixi files)
 # ======================================================================================
-git checkout -b optional-pixi --quiet
+git checkout -b 06-optional-pixi --quiet
 
 cat <<EOF > pixi.toml
 [project]
@@ -489,12 +489,12 @@ echo "========================================================="
 echo ""
 echo "REFERENCE BRANCHES (view-only answer keys):"
 echo "---------------------------------------------------------"
-echo "  main            # starting state (what learners fork)"
-echo "  after-license   # + LICENSE"
-echo "  after-citation  # + CITATION.cff"
-echo "  after-release   # + DOI badge/cff, tag v0.1.0"
-echo "  after-metadata  # finished repo (README, CONTRIBUTING, CoC, .zenodo.json)"
-echo "  optional-pixi   # optional pixi episode (off after-metadata)"
+echo "  main               # starting state (what learners fork)"
+echo "  02-add-license     # + LICENSE"
+echo "  03-add-citation    # + CITATION.cff"
+echo "  04-create-release  # + DOI badge/cff, tag v0.1.0"
+echo "  05-add-metadata    # finished repo (README, CONTRIBUTING, CoC, .zenodo.json)"
+echo "  06-optional-pixi   # optional pixi episode (off 05-add-metadata)"
 echo ""
 echo "HOW TO PUSH TO GITHUB:"
 echo "---------------------------------------------------------"
@@ -520,7 +520,7 @@ echo "  2. Settings → GitHub → toggle 'software-demo' ON."
 echo "  3. On GitHub: Releases → Draft a new release → tag v0.1.0 → Publish."
 echo "  4. Zenodo mints a sandbox DOI (format 10.5072/zenodo.XXXXX)."
 echo "  5. Replace the placeholder 10.5072/zenodo.123456 in the README badge"
-echo "     and CITATION.cff on the after-release / after-metadata branches if"
+echo "     and CITATION.cff on the 04-create-release / 05-add-metadata branches if"
 echo "     you want the real DOI to resolve during the workshop."
 echo ""
 echo "========================================================="
