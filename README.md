@@ -25,7 +25,7 @@ Please open an [issue][issues] or a pull request. See [CONTRIBUTING.md](CONTRIBU
 
 ## Demo repository
 
-The hands-on exercises use a purpose-built demo repository, [UC-OSPO-Network/software-demo][demo], which learners **fork** into their own account. It carries view-only reference branches (`after-license`, `after-citation`, `after-release`, `after-metadata`, and `optional-pixi`) that show the target state after each episode, so learners can check their work.
+The hands-on exercises use a purpose-built demo repository, [UC-OSPO-Network/software-demo][demo], which learners **fork** into their own account. It carries view-only reference branches (`02-add-license`, `03-add-citation`, `04-create-release`, `05-add-metadata`, and `06-optional-pixi`) that show the target state after each episode, so learners can check their work.
 
 ## Citation
 
