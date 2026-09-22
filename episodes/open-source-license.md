@@ -90,7 +90,7 @@ Easy to comply with
 These allow broad reuse with minimal restrictions. Anyone can freely copy, modify, or redistribute the code. They are common in research because they're simple and maximize flexibility. Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
 
 Examples:  **BSD and MIT**
-Different flavors of BSD
+Note:  There are different flavors of BSD: 
 2-Clause and 3-Clause 
 3-Clause includes a clause that explicitly states no endorsement or use of the licensor’s name. It is recommended by UC
 
@@ -109,7 +109,7 @@ Both are considered Permissive licenses; BUT they contain explicit patent grants
 The UC and many corporations are wary about patent grants as these patents grants can inadvertently reach into their patent portfolio and cover a patent from another campus or lab/research team.
 
 For this reach releasing code under the Apache and BSD + Patent is disfavored.
-::::::::::::::::::::::::::::::: caution
+:::::::::::::::::::::::::::::::
 
 ### Copyleft licenses
 Copyleft are also known as viral or reciprocal licenses.  The UC OSS Chart uses the term hereditary.
